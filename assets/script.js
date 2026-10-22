@@ -99,3 +99,88 @@ lb.addEventListener('touchend',function(e){
   if(tx===null||list.length<2)return;var dx=e.changedTouches[0].clientX-tx;
   if(Math.abs(dx)>40)show(dx<0?idx+1:idx-1);tx=null;
 });
+
+/// Shaving progress: fixed left gauge. Counts content panels only, not photos.
+(function () {
+  if (document.getElementById('shaveTracker')) return;
+
+  var buttons = Array.from(document.querySelectorAll('.slice-btn[data-target]'));
+  var targets = new Set();
+  buttons.forEach(function (b) {
+    var id = b.getAttribute('data-target'), p = document.getElementById(id);
+    if (p && p.classList.contains('panel')) targets.add(id);
+  });
+  if (!targets.size) return;
+
+  var opened = new Set(), celebrated = false;
+  var razor = (typeof RZ !== 'undefined') ? RZ : '&#129682;';
+
+  // Gauge
+  var t = document.createElement('div');
+  t.id = 'shaveTracker'; t.className = 'shave-tracker';
+  t.setAttribute('role', 'progressbar');
+  t.setAttribute('aria-label', 'Newsletter shaving progress');
+  t.setAttribute('aria-valuemin', '0'); t.setAttribute('aria-valuemax', '100');
+  t.title = 'Click to jump to the next unshaved section';
+  t.innerHTML =
+    '<div class="st-title">YOUR SHAVE</div>' +
+    '<div class="st-track"><div class="st-fill"></div><div class="st-razor">' + razor + '</div></div>' +
+    '<div class="st-pct" id="shavePercent">0%</div>' +
+    '<div class="st-note" id="shaveNote"></div>';
+  document.body.appendChild(t);
+
+  // Celebration pop-up
+  var toast = document.createElement('div');
+  toast.className = 'shave-toast';
+  toast.innerHTML =
+    '<div class="st-card" role="dialog" aria-live="polite">' +
+      '<div class="big"><span class="st-face">&#129492;</span><span class="st-blade">&#129682;</span><span class="st-spark">&#10024;</span></div>' +
+      '<h3>100% shaved. Looking sharp!</h3>' +
+      '<p>You\u2019ve had a great shave today: all the updates, none of the stubble.<br>' +
+      'Now go make some smooth decisions!</p>' +
+      '<button type="button">Admire my smooth finish</button>' +
+    '</div>';
+  document.body.appendChild(toast);
+  toast.querySelector('button').addEventListener('click', function () { toast.classList.remove('show'); });
+  toast.addEventListener('click', function (e) { if (e.target === toast) toast.classList.remove('show'); });
+
+  function update() {
+    var v = Math.round(opened.size / targets.size * 100);
+    t.style.setProperty('--p', v + '%');
+    t.setAttribute('aria-valuenow', v);
+    t.querySelector('#shavePercent').textContent = v + '%';
+    t.querySelector('#shaveNote').textContent = opened.size + ' / ' + targets.size + ' sections shaved';
+    var done = opened.size === targets.size;
+    t.classList.toggle('complete', done);
+    if (done && !celebrated) {
+      celebrated = true;
+      setTimeout(function () {
+        toast.classList.add('show');
+        if (typeof dropHair === 'function') {
+          for (var i = 0; i < 8; i++) {
+            dropHair(window.innerWidth * (0.1 + i * 0.11), 60 + Math.random() * 80, 18);
+          }
+        }
+      }, 700);
+    }
+  }
+
+  // Count each panel once, the first time it opens
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var id = b.getAttribute('data-target');
+      setTimeout(function () {
+        var p = document.getElementById(id);
+        if (targets.has(id) && p && p.classList.contains('open')) { opened.add(id); update(); }
+      }, 0);
+    });
+  });
+
+  // Click the gauge to jump to the next unshaved section
+  t.addEventListener('click', function () {
+    var next = buttons.find(function (b) { return !opened.has(b.getAttribute('data-target')); });
+    if (next) next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  update();
+})();

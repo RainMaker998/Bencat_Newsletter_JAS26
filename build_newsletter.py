@@ -165,7 +165,7 @@ i3=imp("3","PRODUCTIVITY &amp; CAPABILITY",BLUE,"From manual analysis to AI-assi
 "Bencat locked into MVP scope of the <b>Global Real-time DDS Agent</b>","<b>Quality Alert AI Assistant</b>: optimizes <b>1.1 FTE</b> effort/day","<b>Utility eDDS</b> live: ~1 hr/day saved for the utility team","<b>Bootcamp S2</b> + hosting <b>WISE Advanced Qualification</b> (Dec&rsquo;26)"])
 i4=imp("4","ANTI-FRAGILE &amp; IWS",ORANGE,"Digital Integrated Assessment: <span style='color:#E06A10'>96%</span>",["PRIME VM &amp; ALICS server refresh: capacity, availability, continuity","OctoPlant continuity toolkit adoption started","WH eDDS phase 2: RCCP measures live on DDS board"])
 i5=imp("5","PEOPLE &bull; EVE &bull; SUSTAINABILITY",TEAL,"A self-sufficient team, a greener dashboard",["Smooth transition &amp; onboarding of new leader","Core team &amp; pillar members self-sufficient in O365 (Power BI / Apps / Automate) &amp; GenAI","Data activation for the sustainability (WAGES) dashboard &ndash; data validation in progress"])
-impacts=f'''{sec("2","5 Impacts at a Glance","What JAS&rsquo;26 delivered for the business &ndash; aligned to Ben Cat CBN",PURPLE,"s2")}<div class="lift" style="background:#fff;border-radius:14px;padding:14px 18px;{F}display:flex;align-items:center;gap:8px;flex-wrap:wrap;box-shadow:0 2px 8px rgba(11,37,69,.06);">{pill("1 FOUNDATION",NAVY)}{pill("2 VALUE CREATION",GREEN)}{pill("3 PRODUCTIVITY &amp; CAPABILITY",BLUE)}{pill("4 ANTI-FRAGILE &amp; IWS",ORANGE)}{pill("5 PEOPLE &bull; EVE",TEAL)}<div style="margin-left:auto;">{slicebtn("pImpacts","Shave to open the 5 impacts",PURPLE)}</div></div>
+impacts=f'''{sec("2","5 Impacts at a Glance","What JAS&rsquo;26 delivered for the business &ndash; aligned to Ben Cat CBN",PURPLE,"s2")}<div class="lift" style="background:#fff;border-radius:14px;padding:14px 18px;{F}display:flex;align-items:center;gap:8px;flex-wrap:wrap;box-shadow:0 2px 8px rgba(11,37,69,.06);">{pill("1 FOUNDATION",NAVY)}{pill("2 VALUE CREATION",GREEN)}{pill("3 PRODUCTIVITY &amp; CAPABILITY",BLUE)}{pill("4 ANTI-FRAGILE &amp; IWS",ORANGE)}{pill("5 PEOPLE &bull; EVE &bull; SUSTAINABILITY",TEAL)}<div style="margin-left:auto;">{slicebtn("pImpacts","Shave to open the 5 impacts",PURPLE)}</div></div>
 <div id="pImpacts" class="panel"><div style="padding-top:14px;">
 <div style="display:grid;grid-template-columns:0.9fr 1fr 1fr;grid-template-rows:auto auto;gap:14px;">
 <div style="grid-row:1/3;grid-column:1;">{i1}</div><div>{i2}</div><div>{i3}</div><div>{i4}</div><div>{i5}</div></div>
@@ -294,7 +294,9 @@ secure=f'''<div style="display:flex;gap:16px;align-items:stretch;">
 <div style="flex:1;"><div style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:{NAVY};margin-bottom:4px;">CYBERSECURITY MONTH PLAN</div>{slot("cyber_month","Cyber Month plan",None,"contain",10,"border:1px solid #DCE3EC;")}</div>
 <div style="flex:1;"><div style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:{NAVY};margin-bottom:4px;">CYBER MONTH GAME</div>{slot("cyber_game","Cyber Month game photo",None,"contain",10,"border:1px solid #DCE3EC;")}</div>
 </div></div>'''
-deliv=f'''{sec("3","Key Deliverables","From ideas to everyday impact &ndash; click any picture to see it bigger",ORANGE,"s3")}
+deliv=f'''{sec("3","Key Deliverables","From ideas to everyday impact &ndash; click any picture to see it bigger",ORANGE,"s3")}<div class="lift" style="background:#fff;border-radius:14px;padding:14px 18px;{F}display:flex;align-items:center;gap:8px;flex-wrap:wrap;box-shadow:0 2px 8px rgba(11,37,69,.06);">{pill("M&#7855;T TH&#7846;N",PURPLE)}{pill("eDDS FOR GPO",TEAL)}{pill("BCSSE",TEAL)}{pill("WISE ML",GREEN)}{pill("QA ALERT",BLUE)}{pill("PE BASE",NAVY)}{pill("APPS",TEAL)}<div style="margin-left:auto;">{slicebtn("pDeliv","Shave to open key deliverables",ORANGE)}</div></div>
+<div id="pDeliv" class="panel"><div style="padding-top:14px;">
+
 {matthan}
 <div style="margin-top:16px;">{edds}</div>
 <div style="margin-top:16px;">{soft}</div>
@@ -302,10 +304,11 @@ deliv=f'''{sec("3","Key Deliverables","From ideas to everyday impact &ndash; cli
 <div style="margin-top:16px;">{wise_card}</div>
 <div style="display:flex;gap:16px;margin-top:16px;"><div style="flex:1;">{qa}</div><div style="flex:1;">{pe}</div></div>
 <div style="margin-top:16px;">{simp}</div>
-<div style="margin-top:16px;">{secure}</div>'''
+<div style="margin-top:16px;">{secure}</div></div></div>'''
 
 # ===== 4. EMERGING SKILLS & BENCHMARK
-skills=f'''{sec("4","Emerging Skills &amp; Benchmark","Building digital muscle at scale",GREEN,"s4")}
+skills=f'''{sec("4","Emerging Skills &amp; Benchmark","Building digital muscle at scale",GREEN,"s4")}<div class="lift" style="background:#fff;border-radius:14px;padding:14px 18px;{F}display:flex;align-items:center;gap:8px;flex-wrap:wrap;box-shadow:0 2px 8px rgba(11,37,69,.06);">{pill("BOOTCAMP S2",GREEN)}{pill("DIGITAL ACADEMY",BLUE)}{pill("WISE ADVANCED COACH",PURPLE)}{pill("VN PS BENCHMARK",ORANGE)}<div style="margin-left:auto;">{slicebtn("pSkills","Shave to open skills &amp; benchmark",GREEN)}</div></div>
+<div id="pSkills" class="panel"><div style="padding-top:14px;">
 <div style="display:flex;gap:16px;">
 <div style="flex:0 0 300px;">{slot("bootcamp_s2_poster","Bootcamp S2 poster",None,"contain",12,"border:1px solid #DCE3EC;")}</div>
 <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
@@ -323,16 +326,20 @@ skills=f'''{sec("4","Emerging Skills &amp; Benchmark","Building digital muscle a
 <tr><td style="padding:5px 4px;border-bottom:1px solid #EDF1F6;"><b>2</b> Proficy MCT for material handling</td><td style="padding:5px 4px;border-bottom:1px solid #EDF1F6;color:{GREY};">~30&ndash;60 mins/EO/shift (up to 60&ndash;120 in grooming)</td></tr>
 <tr><td style="padding:5px 4px;border-bottom:1px solid #EDF1F6;"><b>3</b> Academy approach to training</td><td style="padding:5px 4px;border-bottom:1px solid #EDF1F6;color:{GREY};">Scale digital capability</td></tr>
 <tr><td style="padding:5px 4px;border-bottom:1px solid #EDF1F6;"><b>4</b> Data activation for IT Command Center</td><td style="padding:5px 4px;border-bottom:1px solid #EDF1F6;color:{GREY};">Simplify Digital Operation DDS</td></tr>
-<tr><td style="padding:5px 4px;"><b>5</b> WISE: prepare use cases before Dec&rsquo;26 workshop</td><td style="padding:5px 4px;color:{GREY};">Max AI/ML learning, min travel cost</td></tr></table>""",border=PURPLE,extra="height:100%;box-sizing:border-box;")}</div></div>'''
+<tr><td style="padding:5px 4px;"><b>5</b> WISE: prepare use cases before Dec&rsquo;26 workshop</td><td style="padding:5px 4px;color:{GREY};">Max AI/ML learning, min travel cost</td></tr></table>""",border=PURPLE,extra="height:100%;box-sizing:border-box;")}</div></div></div></div>'''
 
 # ===== 5. ORG CORNER
-orgc=f'''{sec("5","Org Corner","People, roles &amp; recognition",TEAL,"s5")}
-<div style="{F}font-size:12px;font-weight:800;letter-spacing:1.5px;color:{TEAL};margin-bottom:8px;">WELCOME MR. K&#7922; TO THE &ldquo;CLUB&rdquo;</div>
-{slot("ky_announcement","Org announcement &ndash; Mr. H&#7891; H&#7891;ng K&#7923;",None,"contain",14)}
+orgc=f'''{sec("5","People &bull; EVE &bull; Sustainability","Recognition, energy &amp; a greener Ben Cat",TEAL,"s5")}<div class="lift" style="background:#fff;border-radius:14px;padding:14px 18px;{F}display:flex;align-items:center;gap:8px;flex-wrap:wrap;box-shadow:0 2px 8px rgba(11,37,69,.06);">
+{pill("WAGES DASHBOARD",GREEN)}
+{pill("R&amp;R",ORANGE)}
+{pill("HAPPY HOURS",PURPLE)}
+<div style="margin-left:auto;">{slicebtn("pPeople","Shave to open People, EVE &amp; Sustainability",TEAL)}</div>
+</div>
+<div id="pPeople" class="panel"><div style="padding-top:14px;">
 <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin-top:16px;">
 <div>{card(f'{kicker("SUSTAINABILITY",GREEN)}{h3("WAGES Dashboard",16)}<div style="font-size:12.5px;color:#333F4F;">Data activation completed to visualize sustainability measures.<div style="margin-top:6px;">{pill("IN PROGRESS",ORANGE)} <span style="font-size:12px;color:#E06A10;font-weight:700;">Data validation in progress</span></div></div><div style="margin-top:8px;">{slot("wages_dashboard","WAGES dashboard",150)}</div>',border=GREEN)}</div>
 <div style="transform:rotate(1.5deg);margin-top:8px;">{card(f'{kicker("R&amp;R",ORANGE)}{h3("Monthly &amp; Quarterly R&amp;R",16)}<div style="margin-top:6px;">{gallery("rr","R&amp;R photos",170)}</div>',border=ORANGE)}</div>
-<div style="transform:rotate(-1.5deg);">{card(f'{kicker("HAPPY HOURS",PURPLE)}{h3("&ldquo;Food for Thoughts&rdquo;",16)}<div style="font-size:12.5px;color:#333F4F;">Our drumbeat to refuel energy and share learnings.</div><div style="margin-top:6px;">{gallery("happy_hours","Happy Hours photo",150)}</div>',border=PURPLE)}</div></div>'''
+<div style="transform:rotate(-1.5deg);">{card(f'{kicker("HAPPY HOURS",PURPLE)}{h3("&ldquo;Food for Thoughts&rdquo;",16)}<div style="font-size:12.5px;color:#333F4F;">Our drumbeat to refuel energy and share learnings.</div><div style="margin-top:6px;">{gallery("happy_hours","Happy Hours photo",150)}</div>',border=PURPLE)}</div></div></div></div>'''
 
 # ===== 6. WHAT'S NEXT & HELP NEEDED
 NEXT_OND=[
@@ -409,7 +416,8 @@ team=f'''{sec("7","One Winning Digital Team","Two teams. One partnership. One go
 <div style="width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,{ORANGE},{BLUE});color:#fff;font-size:34px;font-weight:800;text-align:center;line-height:60px;box-shadow:0 4px 12px rgba(0,0,0,.15);">+</div>
 <div style="font-size:11px;font-weight:800;color:{NAVY};letter-spacing:1px;text-align:center;margin-top:8px;line-height:1.3;">PARTNER<br>TOGETHER</div></div>
 {it}</div>
-<div style="text-align:center;margin-top:12px;{F}font-size:16px;font-weight:800;letter-spacing:3px;color:{NAVY};">ONE <span style="color:{ORANGE};">WINNING</span> DIGITAL <span style="color:{BLUE};">TEAM</span></div></div>'''
+<div style="text-align:center;margin-top:12px;{F}font-size:16px;font-weight:800;letter-spacing:3px;color:{NAVY};">ONE <span style="color:{ORANGE};">WINNING</span> DIGITAL <span style="color:{BLUE};">TEAM</span></div>
+<div style="margin-top:18px;{F}font-size:12px;font-weight:800;letter-spacing:1.5px;color:{BLUE};margin-bottom:8px;">FULL DIGITAL PILLAR MEMBERSHIP</div>{slot("pillar_membership","Digital Pillar Membership",None,"contain",14)}</div>'''
 
 footer=f'''<div style="margin-top:36px;background:{NAVY};padding:22px 44px;{F}color:#C9D8EA;display:flex;justify-content:space-between;align-items:center;">
 <div><div style="font-size:18px;font-weight:800;color:#fff;">Data first &ndash; then AI.</div><div style="font-size:12px;">Bencat Digital Team &bull; Questions or ideas? Reply to this email.</div></div>
